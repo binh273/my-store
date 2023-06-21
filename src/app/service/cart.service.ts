@@ -12,7 +12,15 @@ export class CartService {
   }
 
   addToCart(product: Product): void {
-    this.cartList.push(product);
+    if(this.cartList.some(item => item.id === product.id)){
+      this.cartList.forEach(item => {
+        if(item.id === product.id){
+          item.selectedAmount = product.selectedAmount
+        }
+      })
+    } else {
+      this.cartList.push(product);
+    }
   }
 
   removeFromCart(product: Product): Product[] {

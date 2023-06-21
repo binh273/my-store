@@ -28,8 +28,12 @@ export class AddItemToCartComponent {
     );
   }
   onClickAdd(item: Product): void {
-    this.item.selectedAmount = this.selectedAmount;
-    this.cartService.addToCart(item);
-    alert(`${this.item.name} added to cart!\nTotal: ${this.selectedAmount}`);
+    if(this.selectedAmount !== 0){
+      this.item.selectedAmount = this.selectedAmount;
+      this.cartService.addToCart(item);
+      alert(`${this.item.name} added to cart!\nTotal: ${this.selectedAmount}`);
+    }else{
+      alert(`Please select the quantity of the product`);
+    }
   }
 }
