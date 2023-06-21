@@ -1,27 +1,46 @@
-# MyStore
+#### My Store Project
+#### App components
++ Product list `product-list`: list of all product items on homepage
++ Product item `product-item`: single component that makes up product list
++ Product detail `product-item-detail`: detail of product when users navigate to single product with specific id
++ add-item-to-cart `add-to-cart`: add product to cart
++ header `header`: navigation header that stays on top of every route
++ Cart `cart`: checkout form with form validation and cart list
++ Cart-item `cart-item` : single component that makes up cart
++ Cart-item `cart-order` : single component that makes up cart
++ Confirm `confirm`: confirm page after successful checkout
+##### Model:
++ Product
++ user
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+##### Service:
++ Product
++ Cart
 
-## Development server
+##### Routing:
++ `/products`: product homepage 
++ `products/:id`: product item detail page 
++ `/cart`: cart checkout page 
++ `/confirm`: confirmation page
+#### Build the project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng build` OR `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Code scaffolding
+## Installing dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm install
 
-## Build
+### Prettier ###
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm run prettier
+```
 
-## Running unit tests
+### Linting ###
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm run lint
+```
+#### Run the project
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng serve` OR `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

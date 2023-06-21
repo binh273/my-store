@@ -1,0 +1,14 @@
+<div class="detail-container">
+    <div class="detail-item">
+        <img src="{{item.url}}" class="img"/>
+    </div>
+    <div class="detail-item">
+        <h2>{{item.name}}</h2>
+        <p>{{item.price}} $</p>
+        <p>{{item.description}}</p>
+        <app-add-item-to-cart [item] = "item"></app-add-item-to-cart>
+        <a routerLink="/products" routerLinkActive="router-link-active">
+            <p>Back to product list</p>
+        </a>
+    </div>
+</div>
